@@ -66,8 +66,8 @@ void loop()
     myservo.attach(servoPin);
     myservo.write(val);
     motor.go(p.button1,p.chanel2);
-    pompa.go(p.button2,255);
-
+    pompa.go(true,p.button2*255);
+    
   battery=analogRead(batteryPin);
   voltage=2.0*5.0*battery/1023;
 	str=String(p.chanel1)+" "+String(p.chanel2)+" "+String(p.button1)+" "+String(p.button2)+" "+String(voltage);
